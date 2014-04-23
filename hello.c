@@ -43,14 +43,14 @@ void exit(int return_code) {
 }
 
 void puts(char* message) {
-  syscall_3(SYSCALL_WRITE, STDOUT_FD, message, strlen(message));
-}
-
-void _start(void) {
-  exit(main());
+  syscall_3(SYSCALL_WRITE, STDOUT_FD, (int64)message, strlen(message));
 }
 
 int main(void) {
   puts("Hello World");
   return 7;
+}
+
+void _start(void) {
+  exit(main());
 }
