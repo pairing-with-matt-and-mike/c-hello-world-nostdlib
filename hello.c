@@ -30,13 +30,6 @@ void syscall_3(int64 syscall_number, int64 arg1, int64 arg2, int64 arg3) {
 }
 
 
-/* http://en.wikipedia.org/wiki/X86_calling_conventionsq */
-/* http://www.ibiblio.org/gferg/ldp/GCC-Inline-Assembly-HOWTO.html */
-
-int x(int n) {
-  int index[n];
-}
-
 int strlen(char* string) {
   int index = 0;
   while (string[index] != '\0') {
